@@ -27,13 +27,13 @@ $ serverless deploy
 After deploying, you should see output similar to:
 
 ```bash
-Deploying aws-node-http-api-project to stage dev (us-east-1)
+Deploying simple-example-query-formatter-lambda to stage dev (us-east-1)
 
-✔ Service deployed to stack aws-node-http-api-project-dev (152s)
+✔ Service deployed to stack simple-example-query-formatter-lambda-dev-api (152s)
 
 endpoint: GET - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com/
 functions:
-  hello: aws-node-http-api-project-dev-hello (1.9 kB)
+  api: simple-example-query-formatter-lambda-dev-api (1.9 kB)
 ```
 
 _Note_: In current form, after deployment, your API is public and can be invoked by anyone. For production deployments, you might want to configure an authorizer. For details on how to do that, refer to [http event docs](https://www.serverless.com/framework/docs/providers/aws/events/apigateway/).
@@ -62,7 +62,7 @@ Which should result in response similar to the following (removed `input` conten
 You can invoke your function locally by using the following command:
 
 ```bash
-serverless invoke local --function hello
+serverless invoke local --function api --data '{"sql_data": "","language": "mysql", "tab_width": 1,"key_wordCase": "upper", "modern_mode": true}'
 ```
 
 Which should result in response similar to the following:
