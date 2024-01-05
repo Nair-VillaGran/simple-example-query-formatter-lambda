@@ -2,6 +2,15 @@ const { format } = require("sql-formatter");
 const { Parser } = require("node-sql-parser");
 
 module.exports.handler = async (event) => {
+  if (!event.body) {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({
+        message: "No body was provided in the event.",
+      }),
+    };
+  }
+
   const { sql_data, ...params } = JSON.parse(event.body);
 
   const modernMode = params.modern_mode;
