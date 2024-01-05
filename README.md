@@ -50,7 +50,7 @@ Which should result in response similar to the following (removed `input` conten
 
 ```json
 {
-  "message": "Go Serverless v2.0! Your function executed successfully!",
+  "message": "{{Query formatted}}",
   "input": {
     ...
   }
