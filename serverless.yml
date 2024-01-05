@@ -1,0 +1,15 @@
+service: simple-example-query-formatter-lambda
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  region: "us-west-2"
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: post
