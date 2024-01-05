@@ -10,7 +10,7 @@ authorName: 'Serverless, inc.'
 authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
 -->
 
-# Serverless Framework Node HTTP API on AWS
+# Simple Example Lambda ( query-formatter )
 
 This template demonstrates how to make a simple HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.
 
